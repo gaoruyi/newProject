@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 解决浏览器 字体变大的问题-->
+	<meta name="wap-font-scale" content="no">
+
+	<!-- 顶部状态条的颜色 电池   defalult 白色          black 黑色   下面的词灰色半透明-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!--网站开启对web app的支持  -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- 手机号码不被显示为拨号连接 -->
+	<meta name="format-detection" content="telephone=no, address=no">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+	<title>找回密码</title>
+	<link rel="stylesheet" type="text/css" href="css/getpwd.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+</head>
+<body>
+	<section class="layout">
+		<div class="top">
+			<a href="login.html" class="fl"><i class="iconfont trans">&#xe601;</i></a>
+			找回密码
+			<a href="#" class="fr top_menu"><i class="iconfont">&#xe66b;</i></a>
+		</div>
+		<div class="denglu">
+			<h3>找回密码</h3>
+			<ul>
+				<li class="usename">
+					<input type="search" name="" placeholder="手机号/邮箱" onfocus="this.placeholder=''" onblur="this.placeholder='手机号/邮箱'" id="uName">
+				</li>
+				<li class="keyword">
+					<input type="search" name="" placeholder="请输入验证码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入验证码'" class="yanzheng2">
+					<input type="button" name="" value="获取验证码" class="yanzheng3 fr">
+				</li>
+				<li class="liji">
+					<input type="submit" name="" value="修改密码" id="submit" >
+				</li>
+			</ul>
+		</div>
+	</section>
+</body>
+</html>

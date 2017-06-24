@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 解决浏览器 字体变大的问题-->
+	<meta name="wap-font-scale" content="no">
+
+	<!-- 顶部状态条的颜色 电池   defalult 白色          black 黑色   下面的词灰色半透明-->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<!--网站开启对web app的支持  -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- 手机号码不被显示为拨号连接 -->
+	<meta name="format-detection" content="telephone=no, address=no">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>秒杀</title>
+	<link rel="stylesheet" type="text/css" href="css/Seckill.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<script src="js/jquery-1.11.1.js"></script>
+</head>
+<body>
+	<section class="layout">
+		<header>
+			<div class="top">
+				<a href="javascript:history.back()" class="fl"><i class="iconfont trans">&#xe601;</i></a>秒杀<a href="#" class="fr top_menu"><i class="iconfont">&#xe66b;</i></a>
+				<ul class="top_nav">
+					<li>
+						<i class="iconfont">&#xe62a;</i>
+						<span>首页</span>
+						<a href="index.html"></a>
+					</li>
+					<li>
+						<i class="iconfont">&#xe62a;</i>
+						<span>搜索</span>
+						<a href="#"></a>
+					</li>
+					<li>
+						<i class="iconfont">&#xe62a;</i>
+						<span>购物车</span>
+						<a href="#"></a>
+					</li>
+					<li>
+						<i class="iconfont">&#xe62a;</i>
+						<span>会员中心</span>
+						<a href="#"></a>
+					</li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+				$(function(){
+					$(".top_menu").click(function(){
+						if ($(".top_nav").is(":hidden")) {      
+						//判断jqury的样式属性1.$(".top_nav").is(":hidden");2.$(".top_nav").css("display");3.$(".top_nav").is(":visible");
+							$(".top").css("height","3.12rem");
+							$(".top .top_nav").css({"height":"1.84rem","display":"block"});
+							$(".seckill").css("top","3.12rem");
+						}else{
+							$(".top").css("height","1.28rem");
+							$(".top .top_nav").css({"display":"none"});
+							$(".seckill").css("top","1.28rem");
+						}
+					})
+				});
+			</script>
+		</header>
+		<div class="m_layout">
+			<div class="seckill">
+				<ul class="seckill_box">
+					<li class="current">10:00</br><span>正在进行</span></li>
+					<li>16:00</br>即将开始</span></li>
+					<li>1:00</br>即将开始</span></li>
+				</ul>
+				<div class="seckill_time">
+					<p class="fl">抢购中</p>
+					<p class="fr">距结束&nbsp;:&nbsp;<span id="time">00:00:00</span></p>
+				</div>
+				<script type="text/javascript">
+					window.onload=function(){
+						function showTime(){
+							var nowDate=new Date().getTime();//当前时间
+							var date=new Date("2018/01/01 00:00:00");
+							var diff=(date.getTime()-nowDate)/1000;//时间差
+
+							var hour=parseInt(diff/(60*60));//剩余的小时数；
+							var minute=parseInt(diff/60%60);//除去整个的小时数，剩下的分钟数；
+							var second=parseInt(diff%60);//剩余的秒数
+
+							var ti=document.getElementById("time");
+
+							second=diu(second);
+							minute=diu(minute);
+							hour=diu(hour);
+
+							var onTime=hour+":"+minute+":"+second;
+							ti.innerHTML=onTime;//把拼凑的倒计时放进span里面，显示在html中；
+
+							//判定倒计时时间为零时 ，则停止计时器;
+							if (diff<=0) {
+								clearInterval(t);
+							}
+						}
+						var t=setInterval(showTime,1000);
+						function diu(val){
+							if (val<10) {
+								return "0"+val;
+							}return val;
+						}
+					}
+				</script>
+				<ul class="seckill_content">
+					<li>
+						<div class="img fl">
+							<img src="images/01.jpg">
+						</div>
+						<div class="text fl">
+							<h3>碧螺 绿茶 碧螺春 特级炒青绿茶 200克炒青</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/02.jpg">
+						</div>
+						<div class="text fl">
+							<h3>碧螺 绿茶 碧螺春 特级炒青绿茶 200克炒青</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/03.jpg">
+						</div>
+						<div class="text fl">
+							<h3>41.8度 双沟 珍酒坊君坊 480m加20ml</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/04.jpg">
+						</div>
+						<div class="text fl">
+							<h3>41.8度 双沟 珍酒坊君坊 480m加20ml</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/05.jpg">
+						</div>
+						<div class="text fl">
+							<h3>41.8度 双沟 珍酒坊君坊 480m加20ml</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/06.jpg">
+						</div>
+						<div class="text fl">
+							<h3>41.8度 双沟 珍酒坊君坊 480m加20ml</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="seckill_content1">
+					<li>
+						<div class="img fl">
+							<img src="images/07.jpg">
+						</div>
+						<div class="text fl">
+							<h3>绿茶 碧螺春 特级炒青绿茶 200克</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/08.jpg">
+						</div>
+						<div class="text fl">
+							<h3>绿茶 碧螺春 特级炒青绿茶 200克</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/09.jpg">
+						</div>
+						<div class="text fl">
+							<h3>绿茶 碧螺春 特级炒青绿茶 200克</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/10.jpg">
+						</div>
+						<div class="text fl">
+							<h3>绿茶 碧螺春 特级炒青绿茶 200克</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/11.jpg">
+						</div>
+						<div class="text fl">
+							<h3>绿茶 碧螺春 特级炒青绿茶 200克</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+					<li>
+						<div class="img fl">
+							<img src="images/12.jpg">
+						</div>
+						<div class="text fl">
+							<h3>绿茶 碧螺春 特级炒青绿茶 200克</h3>
+							<p>¥112.00&nbsp;<span>¥115.00</span></p>
+							<a href="javascript:;" class="fr">去抢购</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

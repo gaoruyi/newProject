@@ -1,0 +1,95 @@
+/*768px以下直接写*/
+header #logo{  display: inline-block;  width: 180px;  height: 36px;  background: url("../img/logo.png") no-repeat;  background-size: auto 36px;  }
+header .col-md-2{display: none}
+header .navbar-default{ height: 75px;padding-top: 20px;background:#000;border: none;}
+header .navbar-toggle{margin-top: 0px;}
+header .navbar-collapse .navbar-nav>li{background:#ae955f;  text-align: center;height:35px;}
+header .navbar-collapse .navbar-nav>li>a{color:#fff;}
+header .navbar-collapse .navbar-nav>li:hover{background: #cbac6c;}
+header .navbar-collapse .navbar-nav>li:hover a{color: #fff;}
+header .navbar-default .navbar-collapse{border-color:#000;}
+/*主体1*/
+.main-body .page1{overflow: hidden;width: 100%;height: 400px;margin-top:75px;}
+.main-body .page1 .bg_media{background: url("../img/banner5.jpg") no-repeat; background-size:cover;width: 100%;height:400px;position:absolute;z-index: -1;}
+.main-body .page1 .carousel-caption{padding-bottom: 110px; }
+.main-body .page1 .carousel-caption h2 em{ font-style: normal;  font-size:38px;font-family: "新宋体";font-weight: bold}
+.main-body .page1 .carousel-caption h2 span{  font-size:19px;font-family: "Javanese Text";display: block;margin-top: 28px;}
+/*主体2*/
+.main-body .page2{overflow: hidden}
+.main-body .page2 .column{padding:20px 15px 90px 15px;}
+.main-body .page2 .column h4{font-size: 20px;font-family: "新宋体"; font-weight: bold;border-bottom: 1px solid #e5e5e5;padding-bottom: 10px;}
+.main-body .page2 ul{padding: 0;margin-top: -9px;}
+.main-body .page2 ul .col-sm-12{list-style: none;border-top:1px solid #e5e5e5;padding-top:30px;margin-bottom:0;}
+.main-body .page2 ul .col-sm-12 .wpb_pic{width: 45%;height: 180px;padding-right: 6px;padding-bottom:6px;box-shadow: 0px 0px 5px #ccc;}
+.main-body .page2 ul .col-sm-12 .wpb_pic img{width: 100%;height: 100%;}
+.main-body .page2 ul h3 a{color:#373a41;font-size: 20px;font-weight: bold}
+.main-body .page2 ul .wpb_t p{font-size: 14px;color:#727272;line-height: 20px;margin-top: -5px;}
+.main-body .page2 ul .wpb_t span{display:block;margin-top:25px;text-align: right}
+.main-body .page2 ul .wpb_t span a{font-size: 16px;color:#b28427; }
+.main-body .page2 ul a:hover{text-decoration: none;}
+.main-body .page2 ul li:hover .wpb_a{color:#7ccc3f;}
+.main-body .page2 ul li:hover h3 a{color: #b49962;}
+
+.main-body .page2 .mypage{padding-top: 20px;}
+.main-body .page2 .mypage a{display: inline-block;padding: 0px 6px;border: 1px solid #b59a63;font-size: 14px;color:#b59a63;}
+.main-body .page2 .mypage .first{background: #b59a63;color:#fff;}
+.main-body .page2 .mypage a:hover{text-decoration: none;}
+/*主体3*/
+.page3 .mobile{width: 100%;height:190px;background: #d0b170;overflow: hidden;}
+.page3 .mobile .mobile_img{width:12%;margin:50px auto;}
+.page3 .mobile .mobile_img img{width:100%;}
+.page3 .service{width: 100%;height: 40px;background: #926f35;border-top:1px solid #926f35;color:#fff;font-size: 16px;letter-spacing: 1px;
+    text-align: center;line-height: 40px;position: fixed;bottom:0;}
+.page3 .service:hover{background: #d0b170;}
+.page3 .service_su{display: none}
+.page3  .fa .fa-angle-up{position: fixed;bottom:50px;color:#fff;text-align: right;right:25px;font-size: 20px;
+    font-weight:bold;display: none;}
+/*768ox及以上*/
+@media (min-width: 768px){
+    header #logo{ height: 33px;  margin-top: 18px;  margin-left: 40px;  background: url("../img/logo2.png") no-repeat;  background-size: 100% 100%;  }
+    /*导航条背景*/
+    header .navbar-default{  height: 75px;  line-height: 75px;  padding-top: 0; border:none;background-color:rgba(0,0,0,0.4);}
+    header .navbar-default .navbar-nav{ width: 60%;height:75px;margin-left: 3%;}
+    header .navbar-default .navbar-nav>li{margin-right: 4%;height: 75px;line-height: 75px;}
+    header .navbar-default .navbar-nav>li>a{  display:inline-block;  color: #cbac6c;  font-size: 16px;}
+    header .navbar-default .navbar-nav>li:hover a{color: #cb9845;}
+    header .navbar-collapse .navbar-nav>li{background: none;}
+    header .navbar-collapse .navbar-nav>li:hover{background: none;}
+    header .navbar-fixed-top{display: block;}
+    header .nav_r{float: right;margin-top: -85px;display: block;}
+    header .nav_r .glyphicon-earphone{color:#eaac00;font-size: 19px;}
+    header .nav_r span{font-size: 20px;color:#fff;}
+
+    /*滚动到一定高度后的变化样式*/
+    header.scrollStyle .navbar-default{width:100%;height: 60px;line-height:60px;  background-color:rgba(0,0,0,0.6) ;}
+    header.scrollStyle #logo{  margin-top:13px;}
+    header.scrollStyle .navbar-nav{width:62%;height:60px;;position: absolute;right:0;}
+    header.scrollStyle .nav_r{  display: none;}
+    header.scrollStyle .navbar-default .navbar-nav>li{height:60px;line-height: 60px;margin-right: 5%;}
+    header.scrollStyle .navbar-default .navbar-nav>li>a{  display:inline-block;  color: #cbac6c;  font-size: 16px;}
+    header.scrollStyle .navbar-default .navbar-nav>li>.active{border-bottom: 1px solid #cbac6c}
+    header.scrollStyle .navbar-default .navbar-nav>li>a:hover{border-bottom: 1px solid #cbac6c}
+
+    /*主体1*/
+    .main-body .page1{margin-top:0px;}
+    .main-body .page1 .bg_media{background: url("../img/banner5.jpg") no-repeat; background-size:100%;}
+    .main-body .page1 .carousel-caption h2 em{ font-style: normal;  font-size:38px;letter-spacing: 3px;font-family: "新宋体";font-weight: bold}
+    .main-body .page1 .carousel-caption h2 span{  font-size:19px;font-family: "Javanese Text";letter-spacing: 1px;}
+    /*主体2*/
+    .main-body .page2 .column{width: 100%;padding:48px 50px 90px 50px;}
+    .main-body .page2 .column h4{font-size: 36px;font-family: "新宋体"; font-weight: bold;border-bottom: 1px solid #e5e5e5;padding-bottom: 10px;}
+    .main-body .page2 .column ul{overflow: hidden}
+    .main-body .page2 ul .col-sm-12{padding-bottom:35px;}
+    .main-body .page2 ul .col-sm-12 .wpb_pic{width: 25%;height: 180px;padding-right: 6px;padding-bottom:6px;box-shadow: 0px 0px 5px #ccc;float: left}
+    .main-body .page2 ul .col-sm-12 .wpb_pic img{width: 100%;height: 100%;}
+    .main-body .page2 ul .wpb_t{width: 75%;float: left;padding-left:30px;margin-top:-20px;}
+    /*主体3*/
+    .page3{ width:100%;height: 250px; overflow: hidden;}
+    .page3 .mobile{width: 100%;height:250px;background: #d0b170;overflow: hidden;}
+    .page3 .mobile .mobile_img{width:7%;margin:40px auto;}
+    .page3 .mobile .mobile_img img{width:100%;}
+    .page3 .mobile .service_su{display: block;text-align: center;color:#fff;font-size: 14px;}
+    .page3 .service{display: none;}
+    .page3 .fa .fa-angle-up{bottom:35px;}
+
+}

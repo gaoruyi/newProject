@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>恒远财富 | 产品和服务</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="../lib/jquery-1.11.1.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/service.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#my-menu">
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+            </button>
+            <a href="index.HTML" id="logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="my-menu">
+            <ul class="nav navbar-nav">
+                <li><a href="index.HTML" >首页</a></li>
+                <li><a href="summary.HTML" class="active">公司简介</a></li>
+                <li><a href="news.HTML">企业动态</a></li>
+                <li><a href="team.HTML">企业团队</a></li>
+                <li><a href="service.HTML">产品和服务</a></li>
+                <li><a href="contact.HTML">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="nav_r col-md-2">
+            <i class="glyphicon glyphicon-earphone"></i>
+            <span>400-558-1234</span>
+        </div>
+    </nav>
+</header>
+
+<section class="main-body">
+    <div class="page1">
+        <div class="bg_media">
+            <div class="carousel-caption ">
+                <h2>
+                    <em>您身边的金融理财顾问</em><br>
+                    <span>FINANCIAL ADVISERS AROUND YOU
+                    </span>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="page2">
+        <div class="column">
+            <h3>产品和服务</h3>
+            <p style="border-top: 1px solid #e5e5e5;margin-top:-9px;padding-top:20px;"> 恒远财富公司以严谨的风险控制体系，精选由金融机构发行的具有风险低、收益回报稳定特性的金融产品，根据
+                高净值人士的个人风险属性，凭借专业的经验进行综合配置金融产品，使高净值人士最终达到投资规划合理、资产配置优化、财富保
+                值增值的资产管理目标。
+            </p>
+        </div>
+    </div>
+    <div class="page3">
+        <!--项目融资顾问-->
+        <div class="bit col-sm-10 col-md-12" >
+            <div class="bit_container">
+                <div class="row col-md-12" >
+                    <div class="bit_page " style="margin-left:0;">
+                        <div class="con_icon">
+                            <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
+                        </div>
+                            <p><a href="">项目融资顾问服务</a></p>
+                    </div>
+                    <div class="bit_page ">
+                        <div class="con_icon">
+                            <i class="fa fa-dropbox"></i>
+                        </div>
+                        <p><a href="">企业上市顾问服务</a></p>
+                    </div>
+                    <div class="bit_page " >
+                        <div class="con_icon">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                        </div>
+                        <p><a href="">金融投资顾问服务</a></p>
+                    </div>
+                    <div class="bit_page ">
+                        <div class="con_icon">
+                            <i class="fa fa-cogs" aria-hidden="true"></i>
+                        </div>
+                        <p><a href="">企业私募顾问服务</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page4">
+        <div class="mobile ">
+            <div class="mobile_img ">
+                <img src="img/footer.png">
+            </div>
+            <div class="service_su">
+                版权所有  &nbsp;&nbsp;©苏州恒远财富投资有限公司
+            </div>
+        </div>
+        <div class="service">
+            服务热线
+        </div>
+        <div class="fa">
+            <a href="#">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+        if(scrollTop >= 190){
+            $("header").addClass("scrollStyle");
+        }else{
+            $("header").removeClass("scrollStyle");
+        }
+
+        if(scrollTop>= 400){
+            $(".fa-angle-up").css("display","block");
+        }else{
+            $(".fa-angle-up").css("display","none");
+        }
+    });
+
+    $(".fa-angle-up").click(function(){
+        $("html,body").animate({
+            scrollTop:"0px",
+        },500)
+        return false;
+    })
+    $(".carousel").carousel({
+        interval:2000,
+    });
+    new WOW().init();
+</script>
+</body>
+</html>

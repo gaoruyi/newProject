@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>恒远财富 | 联系我们</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="../lib/jquery-1.11.1.js"></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#my-menu">
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+                <i class="icon-bar"></i>
+            </button>
+            <a href="index.HTML" id="logo"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="my-menu">
+            <ul class="nav navbar-nav">
+                <li><a href="index.HTML" >首页</a></li>
+                <li><a href="summary.HTML" >公司简介</a></li>
+                <li><a href="news.HTML" >企业动态</a></li>
+                <li><a href="team.HTML" class="active">企业团队</a></li>
+                <li><a href="service.HTML">产品和服务</a></li>
+                <li><a href="contact.HTML">联系我们</a></li>
+            </ul>
+        </div>
+        <div class="nav_r col-md-2">
+            <i class="glyphicon glyphicon-earphone"></i>
+            <span>400-558-1234</span>
+        </div>
+    </nav>
+</header>
+
+<section class="main-body">
+    <div class="page1">
+        <div class="bg_media">
+            <div class="carousel-caption ">
+                <h2>
+                    <em>您身边的金融理财顾问</em><br>
+                    <span>FINANCIAL ADVISERS AROUND YOU
+                    </span>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="page2">
+        <div class="container">
+            <div class="row col-md-12">
+                <div class="page2_left col-sm-12 col-md-6">
+                    <div class="left_m">
+                        <p>联系方式</p>
+                        <span>您可以通过以下的联系方式联系我们，我们将竭诚为您服务！</span>
+                    </div>
+                    <div class="map">
+                        <iframe src="map_02.HTML" frameborder="0" scrolling="no" width="100%" height="300"></iframe>
+                    </div>
+                    <div class="address">
+                        <h2>地址：<span>上海市松江区佘山林荫大道18号</span></h2>
+                        <h2>电话：<span>400-558-5684</span></h2>
+                        <h2>传真：<span>0512-66666667</span></h2>
+                        <h2>邮箱：<span> hengyuan_123@163.com</span></h2>
+                    </div>
+                </div>
+                <div class="page2_right col-sm-12 col-md-6">
+                    <div class="right_top">
+                        <p>在线表格</p>
+                        <span>使用表单之前需要配置表单的收件邮箱和网站的发件邮箱。</span>
+                    </div>
+                    <form>
+                        <div>
+                            <label style="font-size: 18px;">姓名<em style="font-style: normal;font-size: 13px;color:#d0b170;padding-left:5px;">(必填项)</em></label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div>
+                            <label style="font-size: 18px;">邮箱 <em style="font-style: normal;font-size: 13px;color:#d0b170;padding-left:5px;">(必填项)</em></label>
+                            <input type="email"  class="form-control">
+                        </div>
+                        <div>
+                            <label style="font-size: 18px;">联系电话</label>
+                            <input type="tel"  class="form-control">
+                        </div>
+                        <div>
+                            <label style="font-size: 18px;">内容<em style="font-style: normal;font-size: 13px;color:#d0b170;padding-left:5px;">(必填项)</em></label>
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                        <div>
+                            <label style="font-size: 18px;">验证码<em style="font-style: normal;font-size: 13px;color:#d0b170;padding-left:5px;">(必填项)</em></label>
+                            <input type="text"  class="form-control">
+                        </div>
+                        <div class="con_inner">
+                            <img src="img/captcha_02.png" style="margin-top:0;" class="con_img">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                        </div>
+                        <button type="submit" >发送</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page3">
+        <div class="mobile">
+            <div class="mobile_img">
+                <img src="img/footer.png">
+            </div>
+            <div class="service_su">
+                版权所有  &nbsp;&nbsp;©苏州恒远财富投资有限公司
+            </div>
+        </div>
+        <div class="service">
+            服务热线
+        </div>
+        <div class="fa">
+            <a href="#">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+        if(scrollTop >= 190){
+            $("header").addClass("scrollStyle");
+        }else{
+            $("header").removeClass("scrollStyle");
+        }
+
+        if(scrollTop>= 700){
+            $(".fa-angle-up").css("display","block");
+        }else{
+            $(".fa-angle-up").css("display","none");
+        }
+    });
+
+    $(".fa-angle-up").click(function(){
+        $("html,body").animate({
+            scrollTop:"0px",
+        },500)
+        return false;
+    })
+    $(".carousel").carousel({
+        interval:2000,
+    });
+    new WOW().init();
+</script>
+</body>
+</html>
